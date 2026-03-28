@@ -1,9 +1,51 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Prueba</title>
-</head>
-<body>
-  <h1>FUNCIONA</h1>
-</body>
+<html lang="es">
+    <head>
+        <title>Título obligatorio</title>
+
+    </head>
+    <body>
+        <nav>
+            
+            <a href="#articulos">Artículos</a>
+            <a href="#carrito">Mi carrito</a>
+            <a href="pago">Método de Pago</a>
+
+        </nav>
+        <section id="articulos">
+        </section>
+        <section id="carrito">
+        </section>
+        <section id="pago">
+            <form>
+                <fieldset>
+                    
+                    <legend>Método de Pago</legend>
+                    <p>
+                        <label>Tipo de tarjeta</label>
+                        <div class="checkbox-group">
+                            <label><input type="radio" name="cardtype" value="visa"> Visa</label>
+                            <label><input type="radio" name="cardtype" value="mastercard"> Mastercard</label>
+                        </div>
+                    </p>
+                            
+                    <p>
+                    <label for="titular">Titular</label><br>
+                    <input type="text" name="name" id="titular" required>
+                    </p>
+                    <p>
+                    <label for="tarjeta_id">Número de Tarjeta</label><br>
+                    <input type="text" name="tarjeta" id="tarjeta_id" required>
+                    </p>
+                    
+                    <input type="submit" value="Continuar con el pago">
+  
+                </fieldset>
+                
+            </form>
+        </section>
+    
+    </body>
 </html>
+
+
