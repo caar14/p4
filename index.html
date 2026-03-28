@@ -2,8 +2,6 @@
 <html lang="es">
     <head>
         <title>Título obligatorio</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
     <body>
@@ -37,7 +35,10 @@
                     </p>
                     <p>
                     <label for="tarjeta_id">Número de Tarjeta</label><br>
-                    <input type="text" name="tarjeta" id="tarjeta_id" required>
+                    <input type="text" name="tarjeta" id="tarjeta_id" pattern="\d{16}" title="16 dígitos sin espacios" required>
+                    </p>
+                    <label for="cvv">Número de Tarjeta</label><br>
+                    <input type="text" name="cvv" id="cvv" required>
                     </p>
                     
                     <input type="submit" value="Continuar con el pago">
