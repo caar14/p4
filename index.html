@@ -1,20 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Título obligatorio</title>
-
+        <title>Compras</title>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <nav>
+            <ul class="navegacion">
             
-            <a href="#articulos">Artículos</a>
-            <a href="#carrito">Mi carrito</a>
-            <a href="pago">Método de Pago</a>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#carrito">Mi carrito</a></li>
+                <li><a href="#pago">Método de Pago</a></li>
 
+            </ul>
         </nav>
         <section id="articulos">
+            <div class="contenedor">
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/71EkSsfl-wL.jpg">
+                    <h3>Twix</h3>
+                    <p>2.5€</p>
+
+                    <div class="cantidad">
+                    Cantidad:
+                    <input type="number" min="1" value="1">
+                    </div>
+
+                    <button>Añadir al carrito</button>
+                </div>
+
+    
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/71W-LffUiyL._AC_UF1000,1000_QL80_.jpg" >
+                    <h3>KitKat</h3>
+                    <p>2€</p>
+
+                    <div class="cantidad">
+                    Cantidad:
+                    <input type="number" min="1" value="1">
+                    </div>
+
+                    <button>Añadir al carrito</button>
+
+                </div>
+                
+                <div class="producto">
+                    <img src="https://www.huesitos.es/images/productos/huesitos-original-grande-new.png" >
+                    <h3>Huesitos</h3>
+                    <p>1.9€</p>
+
+                    <div class="cantidad">
+                    Cantidad:
+                    <input type="number" min="1" value="1">
+                    </div>
+
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            
+
+            
+
         </section>
         <section id="carrito">
+            <h2 class="titulo_carrito">
+                <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png">
+                
+                Mi Carrito</h2>
+                <div class="linea">
+                    <img src="https://m.media-amazon.com/images/I/71EkSsfl-wL.jpg" alt="Twix">
+                    <span class="nombre">Twix</span>
+                    <span class="unidades">x2</span>
+                    <span class="precio">5€</span>
+                    <button class="modificar">Modificar</button>
+                    <button class="eliminar">Eliminar</button>
+                    
+                </div>
+
+                <div class="linea">
+                    <img src="https://m.media-amazon.com/images/I/71W-LffUiyL._AC_UF1000,1000_QL80_.jpg" alt="KitKat">
+                    <span class="nombre">KitKat</span>
+                    <span class="unidades">x1</span>
+                    <span class="precio">2€</span>
+                    <button class="modificar">Modificar</button>
+                    <button class="eliminar">Eliminar</button>
+                    
+                </div>
         </section>
         <section id="pago">
             <form>
@@ -24,8 +98,14 @@
                     <p>
                         <label>Tipo de tarjeta</label>
                         <div class="checkbox-group">
-                            <label><input type="radio" name="cardtype" value="visa"> Visa</label>
-                            <label><input type="radio" name="cardtype" value="mastercard"> Mastercard</label>
+                            <label>
+                                <input type="radio" name="cardtype" value="visa">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Visa_Inc._logo_%282014%E2%80%932021%29.svg" >
+                            </label>
+                            <label>
+                                <input type="radio" name="cardtype" value="mastercard"> 
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1280px-Mastercard_2019_logo.svg.png" >
+                            </label>
                         </div>
                     </p>
                             
@@ -37,8 +117,8 @@
                     <label for="tarjeta_id">Número de Tarjeta</label><br>
                     <input type="text" name="tarjeta" id="tarjeta_id" pattern="\d{16}" title="16 dígitos sin espacios" required>
                     </p>
-                    <label for="cvv">Número de Tarjeta</label><br>
-                    <input type="text" name="cvv" id="cvv" required>
+                    <label for="cvv">Código de seguridad</label><br>
+                    <input type="text" name="cvv" id="cvv" pattern="\d{3}" title="3 dígitos sin espacios" required >
                     </p>
                     
                     <input type="submit" value="Continuar con el pago">
